@@ -4,8 +4,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ets-labs/python-vimrc/mast
 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
 
-
+mkdir ~/.config/mpd
 cp ./mpd.conf ~/.config/mpd/mpd.conf
 cp ./i3_config ~/.config/i3/config
-cp ./i3status.conf /etc/i3status.conf
+sudo cp ./i3status.conf /etc/i3status.conf
 
