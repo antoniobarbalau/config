@@ -44,6 +44,9 @@ apt-get install -q -y   -o Dpkg::Options::="--force-confdef" \
                             -o Dpkg::Options::="--force-confold" \
                             i3lock i3status dmenu dunst
 
+git config --global user.name "antoniobarbalau"
+git config --global user.email "antoniobarbalau@gmail.com"
+
 apt install vim gcc g++ cmake compton
 apt install mpd ncmpcpp mpc
 
@@ -51,11 +54,6 @@ apt install mpd ncmpcpp mpc
 wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 sudo sh Anaconda3-5.0.1-Linux-x86_64.sh
 sudo chown $USER ~/anaconda3/
-
-sudo apt install python3-dev
-
-~/.vim/bundle/YouCompleteMe/install.py --clang-completer
-
 
 
 
