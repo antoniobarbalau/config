@@ -4,11 +4,6 @@ set ttyfast
 set enc=utf-8
 set t_Co=256
 
-set ignorecase
-set smartcase
-"set hlsearch
-set incsearch
-
 syntax enable
 set number relativenumber
 set tabstop=4
@@ -17,8 +12,11 @@ set expandtab
 set showmatch
 set scrolloff=10
 
-set noswapfile
+set ignorecase
+set smartcase
+set incsearch
 
+set noswapfile
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -31,9 +29,7 @@ call vundle#begin()
 call vundle#end()
 filetype plugin indent on
 
-
 colorscheme calmar256-dark
-
 
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']
 autocmd VimEnter * NERDTree
