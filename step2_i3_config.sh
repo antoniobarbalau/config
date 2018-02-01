@@ -17,7 +17,7 @@ cp lock.png ~/Pictures/
 echo "set -o vi" >> ~/.bashrc
 
 sudo apt install dconf-cli
-#profile_id="$(dconf list /org/gnome/terminal/legacy/profiles:/)"
+profile_id="$(dconf list /org/gnome/terminal/legacy/profiles:/)"
 dconf write /org/gnome/terminal/legacy/profiles:/${profile_id}background-color "'rgb(0,0,0)'"
 #dconf write /org/gnome/terminal/legacy/profiles:/${profile_id}foreground-color "'rgb(255,255,255)'"
 dconf write /org/gnome/terminal/legacy/profiles:/${profile_id}background-transparency-percent 60
