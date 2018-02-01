@@ -15,6 +15,8 @@ set scrolloff=10
 set ignorecase
 set smartcase
 set incsearch
+set path+=**
+set wildmenu
 
 set noswapfile
 
@@ -26,6 +28,9 @@ call vundle#begin()
     Plugin 'majutsushi/tagbar'
     Plugin 'flazz/vim-colorschemes'
     Plugin 'Valloric/YouCompleteMe'
+    Plugin 'xuhdev/vim-latex-live-preview'
+    Plugin 'tpope/vim-surround'
+    Plugin 'tpope/vim-commentary'
 call vundle#end()
 filetype plugin indent on
 

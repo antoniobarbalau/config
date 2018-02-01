@@ -53,7 +53,7 @@ apt install mpd ncmpcpp mpc
 
 wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 sudo sh Anaconda3-5.0.1-Linux-x86_64.sh
-sudo chown $USER ~/anaconda3/
+sudo chown -R $USER ~/anaconda3/
 
 sudo apt install exuberant-ctags
 

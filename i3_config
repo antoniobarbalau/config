@@ -20,10 +20,12 @@ exec_always synclient VertScrollDelta=-68
 exec_always synclient HorizScrollDelta=-68
 exec_always compton -b
 bindsym Print exec gnome-screenshot
-exec_always feh --bg-scale ~/Pictures/wall.jpg
+exec_always feh --bg-scale ~/Pictures/wall.jpeg
 exec_always setxkbmap -option grp:alt_shift_toggle us,ru
 
 set $mod Mod4
+
+bindsym $mod+o exec i3lock -i ~/Pictures/wall.png -u -p win
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
