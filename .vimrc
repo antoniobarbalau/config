@@ -39,7 +39,7 @@ colorscheme calmar256-dark
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
-nmap " :NERDTreeToggle<CR>
+nmap " :NERDTreeToggle<cr>
 
 autocmd BufEnter *.py :call tagbar#autoopen(0)
 autocmd BufWinLeave *.py :TagbarClose
@@ -51,6 +51,7 @@ function! FollowTag()
     endif
     execute "tag " . expand("<cword>")
 endfunction
-nnoremap <c-w><c-]> :call FollowTag()<CR>
+nnoremap <c-w><c-]> :call FollowTag()<cr>
+nnoremap <c-x> :!ctags -R *<cr><cr>
 set mouse=a
 
