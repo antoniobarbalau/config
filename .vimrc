@@ -44,3 +44,13 @@ nmap " :NERDTreeToggle<CR>
 autocmd BufEnter *.py :call tagbar#autoopen(0)
 autocmd BufWinLeave *.py :TagbarClose
 
+function! FollowTag()
+    if !exists("w:tagbrowse")
+        vsplit
+        let w:tagbrowse=1
+    endif
+    execute "tag " . expand("<cword>")
+endfunction
+nnoremap <c-w><c-]> :call FollowTag()<CR>
+set mouse=a
+
