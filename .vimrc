@@ -1,4 +1,6 @@
 set nocompatible
+set mouse=a
+set noswapfile
 
 set ttyfast
 set enc=utf-8
@@ -17,8 +19,12 @@ set smartcase
 set incsearch
 set path+=**
 set wildmenu
-
-set noswapfile
+nmap <c-h> <c-w>h
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
+set splitbelow
+set splitright
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -31,27 +37,24 @@ call vundle#begin()
     Plugin 'xuhdev/vim-latex-live-preview'
     Plugin 'tpope/vim-surround'
     Plugin 'tpope/vim-commentary'
+    Plugin 'tpope/vim-vinegar'
 call vundle#end()
 filetype plugin indent on
 
 colorscheme calmar256-dark
 
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-nmap " :NERDTreeToggle<cr>
+nmap ' :NERDTreeToggle<cr>
 
-autocmd BufEnter *.py :call tagbar#autoopen(0)
-autocmd BufWinLeave *.py :TagbarClose
+nmap \ :TagbarToggle<cr>
 
 function! FollowTag()
     if !exists("w:tagbrowse")
         vsplit
         let w:tagbrowse=1
     endif
-    execute "tag " . expand("<cword>")
+    execute "tag ".expand("<cword>")
 endfunction
-nnoremap <c-w><c-]> :call FollowTag()<cr>
-nnoremap <c-x> :!ctags -R *<cr><cr>
-set mouse=a
+nmap <c-w><c-]> :call FollowTag()<cr>
+nmap <c-x> :!ctags -R *<cr><cr>
 
