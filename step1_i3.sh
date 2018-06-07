@@ -47,7 +47,7 @@ apt-get install -q -y   -o Dpkg::Options::="--force-confdef" \
 git config --global user.name "antoniobarbalau"
 git config --global user.email "antoniobarbalau@gmail.com"
 
-apt install -y vim gcc g++ cmake compton
+apt install -y vim-athena gcc g++ cmake compton
 apt install -y mpd ncmpcpp mpc
 
 
