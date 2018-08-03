@@ -5,18 +5,18 @@ cp .vimrc ~/
 vi +PluginInstall
 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
-sudo apt install feh
+sudo apt install -y feh
 
 mkdir ~/.config/mpd
 cp ./mpd.conf ~/.config/mpd/mpd.conf
 cp ./i3_config ~/.config/i3/config
 sudo cp ./i3status.conf /etc/i3status.conf
 cp wall.jpeg ~/Pictures/
-cp lock.png ~/Pictures/
+cp wall.png ~/Pictures/
 
 echo "set -o vi" >> ~/.bashrc
 
-sudo apt install dconf-cli
+sudo apt install -y dconf-cli
 profile_id="$(dconf list /org/gnome/terminal/legacy/profiles:/)"
 dconf write /org/gnome/terminal/legacy/profiles:/${profile_id}background-color "'rgb(0,0,0)'"
 #dconf write /org/gnome/terminal/legacy/profiles:/${profile_id}foreground-color "'rgb(255,255,255)'"
