@@ -199,7 +199,7 @@ bar {
         i3bar_command i3bar -t
         colors {
 
-            statusline #666666
+            statusline #420067
         
             background #00000000
             focused_workspace #90EEBF00 #90EE9000 #ffffff 
