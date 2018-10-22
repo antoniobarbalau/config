@@ -1,13 +1,15 @@
 git config --global user.name "antoniobarbalau"
 git config --global user.email "antoniobarbalau@gmail.com"
 
-sudo apt install -y gcc g++ cmake compton python3-neovim
+sudo apt install -y gcc g++ cmake compton neovim
 sudo apt install -y mpd ncmpcpp mpc
 
 
 wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
 sudo sh Anaconda3-5.3.0-Linux-x86_64.sh
 sudo chown -R $USER ~/anaconda3/
+
+pip install neovim
 
 sudo apt install -y exuberant-ctags
 
@@ -25,7 +27,6 @@ cp ./mpd.conf ~/.config/mpd/mpd.conf
 cp ./i3_config ~/.config/i3/config
 sudo cp ./i3status.conf /etc/i3status.conf
 cp wallpaper.jpg ~/Pictures/
-
 
 sudo sed -i "s/quiet splash/quiet splash acpi_backlight=vendor acpi_osi='!Windows 2013' acpi_osi='!Windows 2012'/" /etc/default/grub
 sudo update-grub
