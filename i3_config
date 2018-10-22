@@ -26,13 +26,13 @@ bindsym Print exec gnome-screenshot -i
 bindsym Shift+Print exec gnome-screenshot
 bindsym c+Print exec gnome-screenshot -i -c
 bindsym Shift+c+Print exec gnome-screenshot -c
-exec_always feh --bg-scale ~/Pictures/wall.jpeg
+exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
 exec_always setxkbmap -option grp:alt_shift_toggle us,ro -variant ,std
 
 set $mod Mod4
 
 bindsym $mod+o exec i3lock -i ~/Pictures/wall.png -u -p win -c 000000
-bindsym $mod+Shift+d exec setxkbmap -layout us -variant dvp
+bindsym $mod+Shift+d exec setxkbmap -layout us -variant dvorak
 bindsym $mod+Shift+y exec setxkbmap -layout us
 
 # Font for window titles. Will also be used by the bar unless a different font

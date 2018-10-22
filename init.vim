@@ -1,10 +1,33 @@
+filetype off
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+call vundle#begin('~/.config/nvim/bundle')
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
+    Plugin 'zchee/deoplete-jedi'
+    Plugin 'trevordmiller/nova-vim'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'majutsushi/tagbar'
+    Plugin 'flazz/vim-colorschemes'
+    Plugin 'Valloric/YouCompleteMe'
+    Plugin 'xuhdev/vim-latex-live-preview'
+    Plugin 'tpope/vim-surround'
+    Plugin 'tpope/vim-commentary'
+    Plugin 'tpope/vim-vinegar'
+    Plugin 'godlygeek/tabular'
+    Plugin 'Vimjas/vim-python-pep8-indent'
+call vundle#end()
+filetype plugin indent on
+
+tnoremap <ESC> <C-\><C-n>
 set nocompatible
+set guicursor=
 set mouse=a
 set clipboard=unnamedplus
 nmap ; :
 set noswapfile
 au VimEnter * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 au VimLeave * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+au TermOpen * setlocal nonumber | setlocal norelativenumber | start
 
 set ttyfast
 set enc=utf-8
@@ -21,8 +44,7 @@ set scrolloff=10
 set ignorecase
 set smartcase
 set incsearch
-set path+=**
-set wildmenu
+nnoremap <CR> :noh<CR>
 nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
@@ -30,25 +52,14 @@ nmap <c-l> <c-w>l
 set splitbelow
 set splitright
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-    Plugin 'VundleVim/Vundle.vim'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'majutsushi/tagbar'
-    Plugin 'flazz/vim-colorschemes'
-    Plugin 'Valloric/YouCompleteMe'
-    Plugin 'xuhdev/vim-latex-live-preview'
-    Plugin 'tpope/vim-surround'
-    Plugin 'tpope/vim-commentary'
-    Plugin 'tpope/vim-vinegar'
-    Plugin 'godlygeek/tabular'
-    Plugin 'Vimjas/vim-python-pep8-indent'
-call vundle#end()
-filetype plugin indent on
+set path+=**
+set wildmenu
+set autochdir
 
-" colorscheme calmar256-dark
-colorscheme grb256
+map j gj
+map k gk
+
+colorscheme dracula
 
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']
 nmap ' :NERDTreeToggle<cr>
@@ -77,7 +88,3 @@ function! s:align()
   endif
 endfunction
 
-
-au BufRead,BufNewFile *.k set filetype=kframework
-au! Syntax kframework source kframework.vim
-syn on
