@@ -32,6 +32,9 @@ cp ./i3_config ~/.config/i3/config
 sudo cp ./i3status.conf /etc/i3status.conf
 cp wallpaper.jpg ~/Pictures/
 
+sudo apt install ranger
+ranger --copy-config=all
+
 sudo sed -i "s/quiet splash/quiet splash acpi_backlight=vendor acpi_osi='!Windows 2013' acpi_osi='!Windows 2012'/" /etc/default/grub
 sudo update-grub
 
