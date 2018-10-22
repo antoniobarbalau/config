@@ -4,6 +4,9 @@ git config --global user.email "antoniobarbalau@gmail.com"
 sudo apt install -y gcc g++ cmake compton neovim
 sudo apt install -y mpd ncmpcpp mpc
 
+sudo apt install zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+cp ./dracula.zsh-theme ~/.oh-my-zsh/themes/
 
 wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
 sudo sh Anaconda3-5.3.0-Linux-x86_64.sh
@@ -17,7 +20,7 @@ conda install -c auto pyconfig
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 cp init.vim ~/.config/nvim/
-nvim +PluginInstall
+nvim +PluginInstall +qa
 ~/.config/nvim/bundle/YouCompleteMe/install.py --clang-completer
 
 sudo apt install -y feh
@@ -30,4 +33,5 @@ cp wallpaper.jpg ~/Pictures/
 
 sudo sed -i "s/quiet splash/quiet splash acpi_backlight=vendor acpi_osi='!Windows 2013' acpi_osi='!Windows 2012'/" /etc/default/grub
 sudo update-grub
+
 
