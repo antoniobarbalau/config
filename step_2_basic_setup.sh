@@ -6,6 +6,7 @@ sudo apt install -y mpd ncmpcpp mpc
 
 sudo apt install zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+cp ./.zshrc ~/
 cp ./dracula.zsh-theme ~/.oh-my-zsh/themes/
 
 wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
