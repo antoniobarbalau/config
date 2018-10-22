@@ -1,8 +1,8 @@
 git config --global user.name "antoniobarbalau"
 git config --global user.email "antoniobarbalau@gmail.com"
 
-sudo apt install -y gcc g++ cmake compton python3-neovim
-sudo apt install -y mpd ncmpcpp mpc
+apt install -y gcc g++ cmake compton python3-neovim
+apt install -y mpd ncmpcpp mpc
 
 
 wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
