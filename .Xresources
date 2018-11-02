@@ -1,12 +1,14 @@
-URxvt.letterSpace:      -1
+URxvt.letterSpace: -1
 *.termName: rxvt-256color
 
-URxvt.font: xft:monospace:size=13
+*.depth: 32
+URxvt.font: xft:monospace:size=13:style=regular
+URxvt*boldFont: xft:monospace:size=13:style=bold
 *.scrollBar: false
 
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
-*.background: #282A36
+*.background: rgba:0028/002A/0036/8888
 *.color0:     #000000
 *.color8:     #4D4D4D
 *.color1:     #FF5555
@@ -16,10 +18,14 @@ URxvt.font: xft:monospace:size=13
 *.color3:     #F1FA8C
 *.color11:    #F4F99D
 *.color4:     #BD93F9
-*.color12:    #CAA9FA
+/* *.color12:    #CAA9FA */
+*.color12:    #729FCF
 *.color5:     #FF79C6
 *.color13:    #FF92D0
 *.color6:     #8BE9FD
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
+
+/* AD7FA8 */
+/* AE9A06 */
