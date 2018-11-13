@@ -44,6 +44,7 @@ set scrolloff=10
 set ignorecase
 set smartcase
 set incsearch
+nnoremap <CR> :noh<CR>
 nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
@@ -58,7 +59,7 @@ set autochdir
 map j gj
 map k gk
 
-colorscheme grb256
+colorscheme dracula
 
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']
 nmap ' :NERDTreeToggle<cr>
