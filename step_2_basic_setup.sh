@@ -34,8 +34,13 @@ sudo cp ./i3status.conf /etc/i3status.conf
 cp wallpaper.jpg ~/Pictures/
 cp rick* ~/Pictures/
 
+sudo apt install rxvt-unicode-256color
+cp ./.Xresources ~/
+xrdb ~/.Xresources
+
 sudo apt install ranger
 ranger --copy-config=all
+cp ./rc.conf ~/.config/ranger/
 
 sudo sed -i "s/quiet splash/quiet splash acpi_backlight=vendor acpi_osi='!Windows 2013' acpi_osi='!Windows 2012'/" /etc/default/grub
 sudo update-grub
