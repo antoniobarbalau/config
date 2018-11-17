@@ -20,7 +20,6 @@ conda install -c auto pyconfig
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 cp init.vim ~/.config/nvim/
 nvim +PluginInstall +qa
-~/.config/nvim/bundle/YouCompleteMe/install.py --clang-completer
 
 sudo apt install -y feh scrot imagemagick w3m-img
 
