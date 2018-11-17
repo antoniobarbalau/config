@@ -13,8 +13,6 @@ wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
 sudo sh Anaconda3-5.3.0-Linux-x86_64.sh
 sudo chown -R $USER ~/anaconda3/
 
-pip install neovim
-
 sudo apt install -y exuberant-ctags
 
 conda install -c auto pyconfig
@@ -24,7 +22,9 @@ cp init.vim ~/.config/nvim/
 nvim +PluginInstall +qa
 ~/.config/nvim/bundle/YouCompleteMe/install.py --clang-completer
 
-sudo apt install -y feh
+sudo apt install -y feh scrot imagemagick w3m-img
+pip install --upgrade pip
+pip install neovim
 
 mkdir ~/.config/mpd
 cp ./mpd.conf ~/.config/mpd/mpd.conf
@@ -34,11 +34,11 @@ sudo cp ./i3status.conf /etc/i3status.conf
 cp wallpaper.jpg ~/Pictures/
 cp rick* ~/Pictures/
 
-sudo apt install rxvt-unicode-256color
+sudo apt install -y rxvt-unicode-256color
 cp ./.Xresources ~/
 xrdb ~/.Xresources
 
-sudo apt install ranger
+sudo apt install -y ranger
 ranger --copy-config=all
 cp ./rc.conf ~/.config/ranger/
 
