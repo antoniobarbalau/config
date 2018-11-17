@@ -4,7 +4,7 @@ git config --global user.email "antoniobarbalau@gmail.com"
 sudo apt install -y gcc g++ cmake compton neovim
 sudo apt install -y mpd ncmpcpp mpc
 
-sudo apt install zsh
+sudo apt install -y zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 cp ./.zshrc ~/
 cp ./dracula.zsh-theme ~/.oh-my-zsh/themes/
@@ -23,8 +23,6 @@ nvim +PluginInstall +qa
 ~/.config/nvim/bundle/YouCompleteMe/install.py --clang-completer
 
 sudo apt install -y feh scrot imagemagick w3m-img
-pip install --upgrade pip
-pip install neovim
 
 mkdir ~/.config/mpd
 cp ./mpd.conf ~/.config/mpd/mpd.conf
