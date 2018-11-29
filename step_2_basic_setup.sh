@@ -25,6 +25,7 @@ sudo apt install -y feh scrot imagemagick w3m-img
 
 mkdir ~/.config/mpd
 cp ./mpd.conf ~/.config/mpd/mpd.conf
+sudo cp ./mpd.conf /etc/mpd.conf
 cp ./ncmpcpp_config ~/.ncmpcpp/config
 cp ./i3_config ~/.config/i3/config
 cp ./lock.sh ~/.config/i3/

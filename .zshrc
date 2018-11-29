@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
 export VISUAL=nvim
+export MPD_PORT=6660
 
 # added by Anaconda3 5.3.0 installer
 # >>> conda init >>>
