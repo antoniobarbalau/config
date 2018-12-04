@@ -58,6 +58,12 @@ set autochdir
 
 map j gj
 map k gk
+map mm :normal! mM<cr>
+map `m :normal! `Mzt<cr>
+map mn :normal! mN<cr>
+map `n :normal! `Nzt<cr>
+map gg :normal! mNgg<cr>
+map G :normal! mNG<cr>
 
 colorscheme dracula
 
@@ -86,5 +92,24 @@ function! s:align()
     normal! 0
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
+endfunction
+
+
+
+let mapleader =" "
+
+nnoremap <leader>sfl :call FixLastSpellingError()<cr>
+nnoremap <leader>scl :call ChooseLastSpellingError()<cr>
+nnoremap <leader>s :call ToggleSpelling()<cr>
+
+
+function! ToggleSpelling()
+    set spell! spelllang=en_us
+endfunction
+function! FixLastSpellingError()
+    normal mm[s1z=`m
+endfunction
+function! ChooseLastSpellingError()
+    normal mm[sz=
 endfunction
 
