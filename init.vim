@@ -15,6 +15,7 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'tpope/vim-vinegar'
     Plugin 'godlygeek/tabular'
     Plugin 'Vimjas/vim-python-pep8-indent'
+    Plugin 'christoomey/vim-sort-motion'
 call vundle#end()
 filetype plugin indent on
 
