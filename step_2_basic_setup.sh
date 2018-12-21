@@ -43,6 +43,7 @@ ranger --copy-config=all
 cp ./rc.conf ~/.config/ranger/
 
 sudo apt install zathura zathura-cb zathura-dev zathura-djvu zathura-pdf-poppler zathura-ps
+sudo apt install texlive-full
 
 sudo sed -i "s/quiet splash/quiet splash acpi_backlight=vendor acpi_osi='!Windows 2013' acpi_osi='!Windows 2012'/" /etc/default/grub
 sudo update-grub
