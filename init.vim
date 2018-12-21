@@ -16,6 +16,7 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'godlygeek/tabular'
     Plugin 'Vimjas/vim-python-pep8-indent'
     Plugin 'christoomey/vim-sort-motion'
+    Plugin 'tmhedberg/SimpylFold'
 call vundle#end()
 filetype plugin indent on
 
@@ -96,6 +97,14 @@ function! s:align()
 endfunction
 
 
+vnoremap < <gv
+vnoremap > >gv
+" set foldmethod=indent
+" set tw=91
+" set nowrap " nush ce face
+" set fo-=t " nush ce face
+" gq iti pune pe mai multe rad
+
 
 let mapleader =" "
 
@@ -113,4 +122,33 @@ endfunction
 function! ChooseLastSpellingError()
     normal mm[sz=
 endfunction
+
+function! CreateLatex()
+    w
+    !pdflatex %
+endfunction
+nnoremap <leader>cl :call CreateLatex()<cr><cr>
+nnoremap <leader>cvl :call CreateLatex()<cr>
+function! OpenLatex()
+    !xdg-open %:r.pdf &
+endfunction
+nnoremap <leader>ol :call OpenLatex()<cr><cr>
+function! ChangeNextBookMark()
+    normal /<--\*\*--><cr>:noh<cr>ca<
+endfunction
+
+
+nnoremap <leader>li i\begin{itemize}<cr>\end{itemize}<cr><esc>kO
+nnoremap <leader>ldi i\item[$-$] 
+
+
+nnoremap <leader><leader> /<--\*\*--><cr>:noh<cr>ca<
+nnoremap <leader>lt :read ~/.config/nvim/latex_template.tex<cr>ggdd/<--\*\*--><cr>:noh<cr>ca<
+
+
+nnoremap <leader>so :source %<cr>
+
+set nofoldenable
+set nospell
+
 
