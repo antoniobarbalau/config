@@ -138,8 +138,8 @@ function! ChangeNextBookMark()
 endfunction
 
 
-nnoremap <leader>li i\begin{itemize}<cr>\end{itemize}<cr><esc>kO
-nnoremap <leader>ldi i\item[$-$] 
+nnoremap <leader>li i\begin{itemize}<cr>\end{itemize}<cr><esc>
+nnoremap <leader>ldi o\item[$-$] 
 
 
 nnoremap <leader><leader> /<--\*\*--><cr>:noh<cr>ca<
