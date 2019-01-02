@@ -17,6 +17,7 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'Vimjas/vim-python-pep8-indent'
     Plugin 'christoomey/vim-sort-motion'
     Plugin 'tmhedberg/SimpylFold'
+    Plugin 'antoniobarbalau/vim_tonio_latex'
 call vundle#end()
 filetype plugin indent on
 
@@ -122,29 +123,6 @@ endfunction
 function! ChooseLastSpellingError()
     normal mm[sz=
 endfunction
-
-function! CreateLatex()
-    w
-    !pdflatex %
-endfunction
-nnoremap <leader>cl :call CreateLatex()<cr><cr>
-nnoremap <leader>cvl :call CreateLatex()<cr>
-function! OpenLatex()
-    !xdg-open %:r.pdf &
-endfunction
-nnoremap <leader>ol :call OpenLatex()<cr><cr>
-function! ChangeNextBookMark()
-    normal /<--\*\*--><cr>:noh<cr>ca<
-endfunction
-
-
-nnoremap <leader>li i\begin{itemize}<cr>\end{itemize}<cr><esc>
-nnoremap <leader>ldi o\item[$-$] 
-
-
-nnoremap <leader><leader> /<--\*\*--><cr>:noh<cr>ca<
-nnoremap <leader>lt :read ~/.config/nvim/latex_template.tex<cr>ggdd/<--\*\*--><cr>:noh<cr>ca<
-
 
 nnoremap <leader>so :source %<cr>
 

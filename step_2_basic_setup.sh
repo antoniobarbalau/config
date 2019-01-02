@@ -19,7 +19,6 @@ conda install -c auto pyconfig
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 cp init.vim ~/.config/nvim/
-cp ./latex_template.tex ~/.config/nvim/
 nvim +PluginInstall +qa
 
 sudo apt install -y feh scrot imagemagick w3m-img
