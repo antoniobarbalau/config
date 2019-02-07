@@ -15,8 +15,6 @@ sudo chown -R $USER ~/anaconda3/
 
 sudo apt install -y exuberant-ctags
 
-conda install -c auto pyconfig
-
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 cp init.vim ~/.config/nvim/
 nvim +PluginInstall +qa
