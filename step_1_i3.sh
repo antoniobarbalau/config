@@ -1,4 +1,4 @@
-apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev \
+apt install -y libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev \
 libxcb-util0-dev libxcb-icccm4-dev libyajl-dev \
 libstartup-notification0-dev libxcb-randr0-dev \
 libev-dev libxcb-cursor-dev libxcb-xinerama0-dev \
@@ -15,4 +15,6 @@ mkdir -p build && cd build/
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
 make
 sudo make install
+
+sudo apt install -y dmenu i3lock i3config dunst
 
