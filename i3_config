@@ -26,7 +26,7 @@ bindsym Print exec gnome-screenshot -i
 bindsym Shift+Print exec gnome-screenshot
 bindsym c+Print exec gnome-screenshot -i -c
 bindsym Shift+c+Print exec gnome-screenshot -c
-exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
+exec_always feh --bg-scale ~/Pictures/absolute.jpg
 exec_always setxkbmap -option grp:alt_shift_toggle us,ro -variant ,std
 
 # exec_always xrandr --output VGA1 --right-of HDMI1
@@ -216,7 +216,8 @@ bar {
         i3bar_command i3bar -t
         colors {
 
-            statusline #420067
+            # statusline #420067
+            statusline #999999
         
             background #00000000
             focused_workspace #90EEBF00 #90EE9000 #ffffff 
