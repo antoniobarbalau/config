@@ -9,8 +9,8 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 cp ./.zshrc ~/
 cp ./dracula.zsh-theme ~/.oh-my-zsh/themes/
 
-wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
-sudo sh Anaconda3-5.3.0-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
+sudo sh Anaconda3-2018.12-Linux-x86_64.sh
 sudo chown -R $USER ~/anaconda3/
 
 sudo apt install -y exuberant-ctags
