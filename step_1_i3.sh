@@ -16,5 +16,5 @@ mkdir -p build && cd build/
 make
 sudo make install
 
-sudo apt install -y dmenu i3lock i3config dunst
+sudo apt install -y dmenu i3lock i3status dunst
 
