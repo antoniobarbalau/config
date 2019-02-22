@@ -19,8 +19,6 @@ new_window none
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
-exec_always synclient VertScrollDelta=-68
-exec_always synclient HorizScrollDelta=-68
 exec_always compton -b
 bindsym Print exec gnome-screenshot -i
 bindsym Shift+Print exec gnome-screenshot
