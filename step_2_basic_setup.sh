@@ -47,10 +47,9 @@ sudo sed -i "s/quiet splash/quiet splash acpi_backlight=vendor acpi_osi='!Window
 sudo update-grub
 
 rm -r ./Anaconda3-2018.12-Linux-x86_64.sh
-rm -r ./i3-gaps
 
 
 # Option "AccelSpeed" "1"
-# Option "NaturalScrolling" "on"
+# Option "NaturalScrolling" "true"
 # add those in /usr/share/X11/xorg.conf.d/40 libinput on touchpad
 
