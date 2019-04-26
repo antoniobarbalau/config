@@ -118,3 +118,7 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+#
+TERM=xterm
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
+bindkey -v

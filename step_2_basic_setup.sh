@@ -48,8 +48,5 @@ sudo update-grub
 
 rm -r ./Anaconda3-2018.12-Linux-x86_64.sh
 
-
-# Option "AccelSpeed" "1"
-# Option "NaturalScrolling" "true"
-# add those in /usr/share/X11/xorg.conf.d/40 libinput on touchpad
+sudo cp ./40-libinput.conf /usr/share/X11/xorg.conf.d/
 
