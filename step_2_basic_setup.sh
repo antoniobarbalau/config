@@ -29,6 +29,9 @@ cp ./i3_config ~/.config/i3/config
 cp ./lock.sh ~/.config/i3/
 sudo cp ./i3status.conf /etc/i3status.conf
 cp absolute.jpg ~/Pictures/
+cp ./diablo.png ~/Pictures/
+cp ./green.jpeg ~/Pictures/
+cp ./fenrir.jpg ~/Pictures/
 cp rick* ~/Pictures/
 
 sudo apt install -y rxvt-unicode-256color
