@@ -28,11 +28,12 @@ cp ./ncmpcpp_config ~/.ncmpcpp/config
 cp ./i3_config ~/.config/i3/config
 cp ./lock.sh ~/.config/i3/
 sudo cp ./i3status.conf /etc/i3status.conf
-cp absolute.jpg ~/Pictures/
-cp ./diablo.png ~/Pictures/
-cp ./green.jpeg ~/Pictures/
-cp ./fenrir.jpg ~/Pictures/
-cp rick* ~/Pictures/
+cp ./pictures/absolute.jpg ~/Pictures/
+cp ./pictures/diablo.png ~/Pictures/
+cp ./pictures/green.jpeg ~/Pictures/
+cp ./pictures/fenrir.jpg ~/Pictures/
+cp ./pictures/gears_cropped.png ~/Pictures/
+cp ./pictures/rick* ~/Pictures/
 
 sudo apt install -y rxvt-unicode-256color
 cp ./.Xresources ~/
