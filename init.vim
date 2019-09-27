@@ -18,6 +18,8 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'christoomey/vim-sort-motion'
     Plugin 'tmhedberg/SimpylFold'
     Plugin 'antoniobarbalau/vim_tonio_latex'
+    Plugin 'kien/ctrlp.vim'
+    Plugin 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 call vundle#end()
 filetype plugin indent on
 
@@ -59,16 +61,34 @@ set path+=**
 set wildmenu
 set autochdir
 
-map j gj
-map k gk
+" map j gj
+" map k gk
 map mm :normal! mM<cr>
 map `m :normal! `Mzt<cr>
 map mn :normal! mN<cr>
 map `n :normal! `Nzt<cr>
 map gg :normal! mNgg<cr>
 map G :normal! mNG<cr>
+map gr :Semshi rename<CR>
+
+
+
 
 colorscheme dracula
+hi semshiLocal           ctermfg=255 guifg=#ffffff
+hi semshiGlobal          ctermfg=255 guifg=#ffffff
+hi semshiImported        ctermfg=255 guifg=#ffffff
+hi semshiParameter       ctermfg=255 guifg=#ffffff
+hi semshiParameterUnused ctermfg=255 guifg=#ffffff
+hi semshiFree            ctermfg=255 guifg=#ffffff
+hi semshiBuiltin         ctermfg=255 guifg=#ffffff
+hi semshiAttribute       ctermfg=255 guifg=#ffffff
+hi semshiSelf            ctermfg=255 guifg=#ffffff
+hi semshiUnresolved      ctermfg=255 guifg=#ffffff
+hi semshiSelected        ctermfg=255 guifg=#ffffff ctermbg=0 guibg=#000000
+hi semshiErrorSign       ctermfg=255 guifg=#ffffff ctermbg=0 guibg=#000000
+hi semshiErrorChar       ctermfg=255 guifg=#ffffff ctermbg=0 guibg=#000000
+sign define semshiError text=E> texthl=semshiErrorSign
 
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']
 nmap ' :NERDTreeToggle<cr>
@@ -109,6 +129,52 @@ vnoremap > >gv
 
 let mapleader =" "
 
+fun! ToggleFunctionJumpMode()
+    if !exists('b:function_jump_mode')
+        let b:function_jump_mode = 1
+        map j :Semshi goto function next<cr>
+        map k :Semshi goto function prev<cr>
+    else
+        unlet b:function_jump_mode
+        map j gj
+        map k gk
+    endif
+
+    return ""
+endfun
+fun! ToggleClassJumpMode()
+    if !exists('b:class_jump_mode')
+        let b:class_jump_mode = 1
+        map j :Semshi goto class next<cr>
+        map k :Semshi goto class prev<cr>
+    else
+        unlet b:class_jump_mode
+        map j gj
+        map k gk
+    endif
+
+    return ""
+endfun
+fun! ToggleNameJumpMode()
+    if !exists('b:name_jump_mode')
+        let b:name_jump_mode = 1
+        map j :Semshi goto name next<cr>
+        map k :Semshi goto name prev<cr>
+    else
+        unlet b:name_jump_mode
+        map j gj
+        map k gk
+    endif
+
+    return ""
+endfun
+map j gj
+map k gk
+map <leader>f :call ToggleFunctionJumpMode()<cr>
+map <leader>c :call ToggleClassJumpMode()<cr>
+map <leader>n :call ToggleNameJumpMode()<cr>
+
+
 nnoremap <leader>sfl :call FixLastSpellingError()<cr>
 nnoremap <leader>scl :call ChooseLastSpellingError()<cr>
 nnoremap <leader>s :call ToggleSpelling()<cr>
@@ -128,5 +194,5 @@ nnoremap <leader>so :source %<cr>
 
 set nofoldenable
 set nospell
-
+hi Normal guibg=NONE ctermbg=NONE
 
