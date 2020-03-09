@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
- for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 0
 # client.focused          #238E23 #238E23 #238E23 #238E23   #238E23
 # client.focused          #000000 #000000 #000000 #000000   #000000
 gaps inner 15
@@ -25,7 +25,8 @@ bindsym Shift+Print exec gnome-screenshot
 bindsym c+Print exec gnome-screenshot -i -c
 bindsym Shift+c+Print exec gnome-screenshot -c
 # exec_always feh --bg-scale ~/Pictures/green.jpeg
-exec_always feh --bg-max ~/Pictures/gears_cropped.png
+# exec_always feh --bg-max ~/Pictures/gears_cropped.png
+exec_always feh --bg-fill ~/Pictures/yellow\ planet.jpg
 exec_always setxkbmap -option grp:alt_shift_toggle us,ro -variant ,std
 
 # exec_always xrandr --output VGA1 --right-of HDMI1
@@ -47,9 +48,12 @@ exec_always setxkbmap -option grp:alt_shift_toggle us,ro -variant ,std
 set $mod Mod4
 
 # bindsym $mod+o exec i3lock -i ~/Pictures/wall.png -u -p win -c 000000
+bindsym $mod+i exec sh ~/.config/i3/infern.sh
 bindsym $mod+o exec sh ~/.config/i3/lock.sh
 bindsym $mod+Shift+d exec setxkbmap -layout us -variant dvorak
 bindsym $mod+Shift+y exec setxkbmap -layout us
+
+bindsym $mod+t exec sh ~/.config/i3/toggle_turing_connection.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

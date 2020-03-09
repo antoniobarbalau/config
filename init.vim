@@ -8,7 +8,7 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'scrooloose/nerdtree'
     Plugin 'majutsushi/tagbar'
     Plugin 'flazz/vim-colorschemes'
-    " Plugin 'Valloric/YouCompleteMe'
+    Plugin 'Valloric/YouCompleteMe'
     Plugin 'xuhdev/vim-latex-live-preview'
     Plugin 'tpope/vim-surround'
     Plugin 'tpope/vim-commentary'
@@ -20,9 +20,9 @@ call vundle#begin('~/.config/nvim/bundle')
     Plugin 'antoniobarbalau/vim_tonio_latex'
     Plugin 'kien/ctrlp.vim'
     " Plugin 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-    Plugin 'dart-lang/dart-vim-plugin'
-    Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-    Plugin 'thosakwe/vim-flutter'
+    " Plugin 'dart-lang/dart-vim-plugin'
+    " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plugin 'thosakwe/vim-flutter'
     Plugin 'enomsg/vim-haskellConcealPlus'
 call vundle#end()
 filetype plugin indent on

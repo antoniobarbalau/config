@@ -34,6 +34,7 @@ cp ./pictures/green.jpeg ~/Pictures/
 cp ./pictures/fenrir.jpg ~/Pictures/
 cp ./pictures/gears_cropped.png ~/Pictures/
 cp ./pictures/rick* ~/Pictures/
+cp ./pictures/yellow\ planet.jpg ~/Pictures/
 
 sudo apt install -y rxvt-unicode-256color
 cp ./.Xresources ~/
