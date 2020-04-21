@@ -2,6 +2,7 @@ git config --global user.name "antoniobarbalau"
 git config --global user.email "antoniobarbalau@gmail.com"
 
 sudo apt install -y gcc g++ cmake compton neovim
+sudo apt-get remove gnome-shell-extension-desktop-icons -y
 
 sudo apt install -y zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
