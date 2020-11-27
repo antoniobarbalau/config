@@ -195,6 +195,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
+bindsym $mod+c sticky toggle
 
 mode "music" {
     bindsym p exec mpc toggle
