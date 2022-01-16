@@ -67,7 +67,6 @@ set nospell
 hi Normal guibg=NONE ctermbg=NONE
 
 
-
 let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-prettier', 'coc-pyright']
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
