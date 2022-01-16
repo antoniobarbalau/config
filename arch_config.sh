@@ -1,4 +1,4 @@
-sudo pacman -Syyu compton feh scrot imagemagick w3m-img
+sudo pacman -Syyu compton scrot imagemagick w3m-img
 
 cp ./i3_config ~/.config/i3/config
 cp ./lock.sh ~/.config/i3/
