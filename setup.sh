@@ -7,6 +7,8 @@ cp ./.Xresources ~/
 xrdb ~/.Xresources
 
 sudo pacman -Sy neovim nodejs npm --noconfirm
+mkdir ~/.config/nvim/
+cp ./init.vim ~/.config/nvim/
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +PlugInstall +qa
 
