@@ -124,6 +124,8 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
 bar {
         height 25
         
+        separator_symbol " "
+        
         i3bar_command i3bar -t
         colors {
         
