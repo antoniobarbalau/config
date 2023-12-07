@@ -1,17 +1,12 @@
-sudo pacman -Sy compton scrot --noconfirm
-cp ./i3_config ~/.config/i3/config
-sudo cp ./i3status.conf /etc/i3status.conf
+sudo apt update
+sudo apt install neovim
 
-sudo pacman -Sy rxvt-unicode --noconfirm
-cp ./.Xresources ~/
-xrdb ~/.Xresources
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.bashrc
+nvm install lts/iron
 
-sudo pacman -Sy neovim nodejs npm --noconfirm
 mkdir ~/.config/nvim/
 cp ./init.vim ~/.config/nvim/
+cp ./coc-settings.json ~/.config/nvim/
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +PlugInstall +qa
-
-sudo pacman -Sy pavucontrol blueman firefox nautilus networkmanager --noconfirm
-sudo systemctl start NetworkManager
-sudo systemctl enable NetworkManager
